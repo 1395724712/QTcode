@@ -21,6 +21,9 @@ public:
     //用于处理子窗口反馈信号的函数
     void dealSub();
 
+    //重载信号的槽函数
+    void dealSub_2(int, QString);
+
 private:
     //在这里定义按钮，然后到mainwidget.cpp里去设置
     QPushButton b1;

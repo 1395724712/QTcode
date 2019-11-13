@@ -14,4 +14,5 @@ void  SubWidget::sendSlot()
 {
     //发送信号
     emit mySignal();
+    emit mySignal(100,"why");
 }

@@ -1,6 +1,7 @@
 //信号和槽的学习
 #include "mainwidget.h"
 #include<QPushButton>
+#include<QDebug>
 MainWidget::MainWidget(QWidget *parent)
     : QWidget(parent)
 {
@@ -46,7 +47,13 @@ MainWidget::MainWidget(QWidget *parent)
     //    connect(&b3,&QPushButton::released,this,&MainWidget::myslot_2);
 
     //处理子窗口的信号
-    connect(&w,&SubWidget::mySignal,this,&MainWidget::dealSub);
+    //使用函数重载时要使用指向函数的指针：
+    void (SubWidget::*Signal_1)()=&SubWidget::mySignal;
+    void (SubWidget::*Signal_2)(int,QString)=&SubWidget::mySignal;
+
+    connect(&w,Signal_1,this,&MainWidget::dealSub);
+    connect(&w, Signal_2,this,&MainWidget::dealSub_2);
+
 }
 
 void MainWidget::myslot()
@@ -74,6 +81,11 @@ void MainWidget::dealSub()
     this->show();
     //隐藏子窗口
     w.hide();
+}
+
+void MainWidget::dealSub_2(int a,QString s)
+{
+    qDebug()<<a<<"  "<<s.toUtf8().data();
 }
 
 MainWidget::~MainWidget()
