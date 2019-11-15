@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>9.pgm</file>
+        <file>F:/大三下/last_test2_2/att_faces_val/s1/9_rot_45.jpg</file>
+        <file>F:/大三下/last_test2_2/att_faces_val/s1/9_rot_-45.jpg</file>
+        <file>F:/大三下/last_test2_2/att_faces_val/s1/9_rot_90.jpg</file>
+        <file>F:/大三下/last_test2_2/att_faces_val/s1/9_rot_-90.jpg</file>
+        <file>9_rot_180.jpg</file>
+        <file>F:/大三下/last_test2_2/att_faces_val/s1/10.pgm</file>
+        <file>F:/大三下/last_test2_2/att_faces_val/s1/10_rot_45.jpg</file>
+        <file>F:/大三下/last_test2_2/att_faces_val/s1/10_rot_-45.jpg</file>
+        <file>F:/大三下/last_test2_2/att_faces_val/s1/10_rot_90.jpg</file>
+        <file>F:/大三下/last_test2_2/att_faces_val/s1/10_rot_-90.jpg</file>
+        <file>F:/大三下/last_test2_2/att_faces_val/s1/10_rot_180.jpg</file>
+    </qresource>
+</RCC>

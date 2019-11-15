@@ -1,5 +1,5 @@
 #include "mainwindow.h"
-#include<QMenu>
+#include<QMenu>//菜单栏
 #include<QMenuBar>
 #include<QAction>
 #include<QDialog>//对话框所需
