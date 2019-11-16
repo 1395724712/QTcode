@@ -66,7 +66,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     //浮动窗口
     QDockWidget *dock=new QDockWidget(this);
-    addDockWidget(Qt::RightDockWidgetArea,dock);
+    addDockWidget(Qt::LeftDockWidgetArea,dock);
     dock->setWidget(b);
 }
 

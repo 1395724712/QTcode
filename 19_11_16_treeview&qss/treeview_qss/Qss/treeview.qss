@@ -1,0 +1,10 @@
+QTreeView{
+    backbround-color:white;
+    margin:6px;
+    border: 5px solid #505050; /* same as regular QTreeView, QListView and QTableView */
+    min-height: 40px; /* necessary in some areas of FreeCAD */
+}
+
+QTreeView::item{
+    border: 1px solid #000000;
+}

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/Qss">
+        <file>Qss/treeview.qss</file>
+    </qresource>
+</RCC>
