@@ -11,7 +11,11 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    qDebug()<<this;
+    qDebug()<<&r<<" "<<&g<<" "<<&b;
+
     //设置spinbox的最小值
+    size = 1;
     ui->spinBox->setMinimum(1);
     ui->spinBox->setMaximum(10);
 
@@ -26,6 +30,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->verticalSlider_3->setMinimum(0);
 
     //设置当前值
+    r = 87;
+    g = 250;
+    b = 255;
     MainWindow::labeltoslider(87,0);
     MainWindow::labeltoslider(250,1);
     MainWindow::labeltoslider(255,2);
@@ -90,11 +97,11 @@ int MainWindow::labeltoslider(int x, int flag)
 
 void MainWindow::Colorchanged()
 {
-    int r = ui->verticalSlider->value();
-    int g = ui->verticalSlider_2->value();
-    int b = ui->verticalSlider_3->value();
+    r = ui->verticalSlider->value();
+    g = ui->verticalSlider_2->value();
+    b = ui->verticalSlider_3->value();
 
-    qDebug()<<"r: "<<r<<" g "<<g<<" b "<<b;
+//    qDebug()<<"r: "<<r<<" g "<<g<<" b "<<b;
 
     QPalette pale = ui->label_4->palette();
     pale.setColor(ui->label_4->foregroundRole(),QColor(r,g,b));
@@ -103,3 +110,9 @@ void MainWindow::Colorchanged()
 
 
 
+
+void MainWindow::on_spinBox_valueChanged(const QString &arg1)
+{
+    size = arg1.toInt();
+//    qDebug()<<"Linewidth: "<<size;
+}
